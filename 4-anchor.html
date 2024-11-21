@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>링크태그, anchor</title>
+</head>
+<body>
+    <a href="1-heading_paragraph.html">제목문단문서로 이동</a><br>
+    <a href="https://www.naver.com/">네이버로 이동</a><br>
+    <a href="https://www.daum.net/" target="_blank">다음으로 이동</a><br>
+
+    <!-- 변경전 -->
+    <h3><a href="https://www.nate.com/">네이트</a></h3>
+    <p><a href="https://www.nate.com/">네이트로 이동</a></p>
+    <!-- 변경후 -->
+    <a href="https://www.nate.com/">
+        <h3>네이트</h3>
+        <p>네이트로 이동</p>
+    </a>
+    <br>
+    <!-- 주소없을경우 -->
+    <a href="#">주소없음</a><br>
+    <a>주소없음</a>
+</body>
+</html>
