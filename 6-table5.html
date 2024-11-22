@@ -1,54 +1,27 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<title>요안도라 객실 소개</title>
-		<style>
-			table { border-collapse: collapse; }
-			th, td { border: 2px solid black; font-size: 24px; }
-			th { width: 200px; height: 30px; }
-		</style>
-	</head>
-	<body>
-	<h1>객실소개</h1>
-	<h2>도미토리</h2>
-	<table>
-		<caption>요안도라 객실</caption>
-		
-		<thead>
-			<tr>
-				<th scope="col">방이름</th>
-				<th scope="col" id="people">대상</th>
-				<th scope="col" id="size">크기</th>
-				<th scope="col" id="price">가격</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row" id="room1">유채방</th>
-				<td headers="room1 people">여성 도미토리</td>
-				<td rowspan="3" headers="room1 room2 size">4인실</td>
-				<td rowspan="4" headers="room1 room2 room3 price">1인 20,000원</td>
-			</tr>
-			<tr>
-				<th scope="row" rowspan="2" id="room2">동백방</th>
-				<td headers="room2 peolple">동성도미토리</td>
-			</tr>
-			<tr>
-				<td headers="room2 people">가족1팀</td>
-			</tr>
-			<tr>
-				<th scope="row" id="room3">천혜향방</th>
-				<td>-</td>
-				<td headers="room3 size">2인실</td>
-			</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td colspan="4">바깥채 전체를 렌트합니다</td>
-			</tr>
-		</tfoot>
-	</table>
+<head>
+    <meta charset="UTF-8">
+    <title>셀의 병합</title>
+    <style>
+        table { border-collapse: collapse; }
+        td { border: 1px solid #000; }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td rowspan="2">1행1열</td>
+            <td colspan="2">1행2열</td>
+        </tr>
+        <tr>
+            <td>2행2열</td>
+            <td rowspan="2">2행3열</td>
+        </tr>
+        <tr>
+            <td colspan="2">3행1열</td>
+        </tr>
+    </table>
+    <br>
 </body>
 </html>
