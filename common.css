@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* 초기화 */
+body, h1, h2, h3, h4, h5, h6, ul { margin: 0; padding: 0; list-style: none;  }
+a { text-decoration: none; }
+.blind { position: absolute; width: 1px; height: 1px; clip: rect(0, 0, 0, 0); }
+
+/* 웹폰트  */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body { font-family: 'Pretendard-Regular';  }
+/* 헤더 */
+#headerWrap { overflow: hidden; height: 130px; border-bottom: 1px solid #000; }
+#headerWrap:hover { height: 200px; }
+header { display: flex; justify-content: space-between; 
+         width: 1000px; margin: 0 auto; padding-top: 40px; }
+header h1 { margin: 40px 0 0 100px; }
+/* lnb */
+#lnb { position: absolute; top: 0; right: 0; width: 100%; background: #aeffb4; }
+#lnb ul { display: flex; justify-content: end; width: 1000px; height: 40px; margin: 0 auto;  }
+#lnb ul li { margin: 0 10px; }
+#lnb ul li a { color: #2f2f2f; }
+/* gnb */
+#gnb { margin-top: 50px;  }
+#gnb > ul { display: flex; }
+#gnb > ul > li { }
+#gnb > ul > li > a { display: block; height: 40px;  }
