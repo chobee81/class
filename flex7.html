@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>플렉서블 박스</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #wrap {
+                    display: -webkit-flex;
+                    display: flex;
+
+                    width: 90%; height: 500px;
+                    margin: 0 auto;
+                    background: #F5FFB7;
+                    border: 4px solid #000;
+                 }
+
+        /* 플렉스 아이템 크기 변경 */
+        #wrap div:nth-child(1) { background: red; flex: 1 1 0;  }
+        #wrap div:nth-child(2) { background: green; flex: 2 2 0; }
+        #wrap div:nth-child(3) { background: blue; flex: 3 3 0; }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
