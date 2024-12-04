@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style>
+        body { margin: 0; font-size: 3em; }
+        header { width: 1000px; height: 150px; margin: 0 auto; background: #ccc; }
+        #wrap { width: 1000px; margin: 0 auto; background: gray; 
+                /* height: 700px; */
+                /* overflow: hidden; */
+        }
+        #wrap::after { content: ""; display: block; clear: both; }
+        section { width: 700px; height: 700px; background: #c22; float: left; }
+        article { width: 200px; height: 500px; background: #2cc; float: right; }
+        footer { width: 1000px; height: 100px; background: #c2c; 
+                margin: 50px auto 0; 
+        }
+        /* float를 적용하면 적용한 요소의 다음 요소가 영향을 받아서
+           남은 영역으로 치고 올라오게 되어 레이아웃에 변형을 가져옴
+           해결방법 : 
+            1. 영향을 받은 다음 요소에 clear를 적용
+            2. float를 적용한 부모요소가 있을경우 
+               - overflow: hidden or auto 적용
+               - 부모요소에 ::after { content: ""; display: block; clear: both; }
+        */
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <div id="wrap">
+        <section>section</section>
+        <article>article</article>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>
