@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그리드 속성</title>
+    <style>
+        #wrap { 
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 100px);
+
+            justify-content: center;
+            align-content: center;
+
+            gap: 10px;
+            height: 90vh;
+            padding: 20px; 
+            background: #808080;
+        }
+        .item { padding: 20px;
+                border: 1px solid #000;
+                background: #f8f49c;
+                font-size: 40px;
+        }
+        .item:nth-child(1) { order: 1; }
+        .item:nth-child(2) { order: 2; }
+        .item:nth-child(3) { order: 3; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+</html>
