@@ -1,0 +1,48 @@
+﻿	----------------------------------------------------------------
+	변환속성
+	----------------------------------------------------------------
+	transform-origin : 중심점 지정
+	/* ex) transform-origin: 100% 100%; (또는 right bottom) */
+	transform-style : 자손의 3차원속성 유지여부
+	/* flat(후손의 3차원 속성 무시), preserve-3d(후손의 3차원 속성 유지) */
+	backface-visibility : 후면의 가시여부 적용
+	/* visible, hidden */
+	perspective : 원근감 /* ex) perspective:500; */
+	----------------------------------------------------------------
+	2차원 변환함수
+	----------------------------------------------------------------
+	translate(translateX, translateY) : 특정한 크기만큼 이동
+	translateX(translateX) : X축으로 특정한 크기만큼 이동
+	translateY(translateY) : Y축으로 특정한 크기만큼 이동
+	scale(scaleX, scaleY) : 특정한 크기만큼 확대 및 축소
+	/* ex) transform: scale(0.5) 50%만큼 줄어든다 */
+	scaleX(scaleX) :  X축으로 특정한 크기만큼 확대 및 축소
+	scaleY(scaleY) :  Y축으로 특정한 크기만큼 확대 및 축소
+	skew(angleX, angleY) : 특정한 각도만큼 기울이기
+	skewX(skewX) :  X축으로 특정한 각도만큼 기울이기
+	skewY(skewY) :  Y축으로 특정한 각도만큼 기울이기
+	rotate(angleZ) : 특정한 각도만큼 회전
+	----------------------------------------------------------------
+	3차원 변환함수
+	----------------------------------------------------------------
+	translate3d(translateX, translateY, translateZ) : 특정한 크기만큼 이동
+	translateX(translateX) : X축으로 특정한 크기만큼 이동
+	translateY(translateY) : Y축으로 특정한 크기만큼 이동
+	translateZ(translateZ) : Z축으로 특정한 크기만큼 이동
+
+	scale3d(scaleX, scaleY, scaleZ) : 특정한 크기만큼 확대 및 축소
+	scaleX(scaleX) :  X축으로 특정한 크기만큼 확대 및 축소
+	scaleY(scaleY) :  Y축으로 특정한 크기만큼 확대 및 축소
+	scaleZ(scaleZ) :  Z축으로 특정한 크기만큼 확대 및 축소
+
+	skew3d(angleX, angleY, angleZ) : 특정한 각도만큼 기울이기
+	skewX(skewX) :  X축으로 특정한 각도만큼 기울이기
+	skewY(skewY) :  Y축으로 특정한 각도만큼 기울이기
+	skewZ(skewZ) :  Z축으로 특정한 각도만큼 기울이기
+
+	rotate3d(angleX, angleY, angleZ) : 특정한 각도만큼 회전
+	rotateX(angleX) : X축으로 특정한 각도만큼 회전
+	rotateY(angleY) : Y축으로 특정한 각도만큼 회전
+	rotateX(angleZ) : Z축으로 특정한 각도만큼 회전
+
+

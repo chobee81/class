@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배경 일부분</title>
+    <style>
+      body { margin: 0; }
+      #wrap { display: flex; justify-content: space-between; }
+      #wrap > div { flex: 1; transition: 0.5s; }
+      #wrap > div > div { width: 1920px; height: 80vh; background: no-repeat center center / 1920px; }
+      #wrap > #con1 > div { width: 100%; background-image: url(https://web-cf-image.cjenm.com/public/share/contentsmng/kr/main-kv-twenty-five-twenty-one-ko-01_1648616354585.jpg); }
+      #wrap > #con2 > div { width: 100%; background-image: url(https://web-cf-image.cjenm.com/public/share/contentsmng/kr/main-kv-you-quiz-on-the-block-ko-02_1648102683304.jpg); }
+      #wrap > #con3 > div { width: 100%; background-image: url(https://web-cf-image.cjenm.com/public/share/contentsmng/kr/main-kv-kcon-03_1648102691675.jpg); }
+
+      #wrap > #con1:hover { flex: 10; }
+      #wrap > #con2:hover { flex: 10; }
+      #wrap > #con3:hover { flex: 10; }
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="con1"><div></div></div>
+      <div id="con2"><div></div></div>
+      <div id="con3"><div></div></div>
+    </div>
+  </body>
+</html>
