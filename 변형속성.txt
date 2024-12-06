@@ -1,0 +1,21 @@
+﻿	-----------------------------------------------------------
+	변형속성
+	-----------------------------------------------------------
+	transition : 모든 속성 한번에 지정
+	/* property duration function delay 순 */
+	transition-delay : 몇 초 후에 재생될지 지정
+	transition-duration : 몇 초 동안 재생할지 지정
+	transition-property :  어떤 속성을 변형할지 지정
+	transition-timing-function :  수치변형함수를 지정
+	/* linear, ease, ease-in, ease-in-out, ease-out */
+
+	-----------------------------------------------------------
+	transition 적용가능한 속성
+	-----------------------------------------------------------
+	위치속성 : top, left, bottom, right
+	크기속성 : width, height
+	박스속성 : margin, padding
+	테두리속성 : border
+	색상속성 : color, background-color
+	투명도속성 : opacity
+	변환속성 : transform
