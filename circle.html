@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Scalable Vector Graphics.</title>
+    <style>
+        svg { width: 500px; height: 500px;
+              border: 1px solid #000; }
+        circle { 
+            fill: transparent;
+            stroke: black;
+            stroke-width: 2;
+            stroke-dasharray: 1257;
+            stroke-dashoffset: 1257;
+            transition: 1s linear;
+        }
+        svg:hover circle { stroke-dashoffset: 0; }
+    </style>
+</head>
+<body>
+    <svg>
+       <circle cx="250" cy="250" r="200" /> 
+    </svg>
+</body>
+</html>
