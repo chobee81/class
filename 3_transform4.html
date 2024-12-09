@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>transform3d</title>
+    <style>
+        body { width: 300px; margin: 200px auto; }
+
+        section { position: relative;
+                  width: 300px;
+                  transform-style: preserve-3d; 
+                  animation: wind 2s linear infinite; }
+        div { width: 300px; height: 300px; 
+              position: absolute; }
+
+        div:nth-child(1) { background: #fa5e5e; }
+        div:nth-child(2) { background: #72f672; transform: rotateY(45deg); }
+        div:nth-child(3) { background: #6c6cfb; transform: rotateY(90deg); } 
+        div:nth-child(4) { background: #fdacba; transform: rotateY(135deg); } 
+
+        @keyframes wind {
+            from { transform: rotateX(-30deg) rotateY(0deg); }
+            to { transform: rotateX(-30deg) rotateY(360deg);  }            
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
