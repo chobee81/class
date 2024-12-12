@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* 웹폰트 - 본문:제주고딕, 타이틀(h1):플라이트 산스 Title */
+@import url('./webfont.css');
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, h2, h3, h4, p, ul, figure { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { text-decoration: none; }
+address { font-style: normal ;}
+.hidden { overflow: hidden; position: absolute; 
+          width: 1px; height: 1px; margin: -1px;
+          clip: rect(0, 0, 0, 0);  }
+body { font-family: 'Jeju Gothic';}
