@@ -1,9 +1,0 @@
-/* 본문 */
-@import url('http://fonts.googleapis.com/earlyaccess/jejugothic.css');
-/* 타이틀 */
-@font-face {
-    font-family: 'FlightSans-Title';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Title.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
