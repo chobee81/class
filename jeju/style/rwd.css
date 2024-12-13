@@ -25,7 +25,7 @@ body { width: 960px; margin: 8px auto 0;
 /* gnb */
 #gnb { width: 100%; }
 #gnb ul { display: flex; }
-#gnb ul li { width: 25%;  }
+#gnb ul li { width: 25%; }
 #gnb ul li a { display: block; line-height: 60px; text-align: center; 
                background: #060; color: #fff; 
                font-family: 'NanumSquareNeoBold'; }
@@ -49,3 +49,27 @@ main { width: 740px; background: #fff; }
           background: #061f1f; color: #fff; 
           text-align: center; }
 #footer address { margin-bottom: 15px; }
+
+/* 태블릿 기준 or 600-1023 */
+@media screen and ( max-width: 1023px ) {
+    body { width: 100%; }
+    main { width: 100%; }
+    #photo { width: 100%; padding: 20px 0; }
+    #photo figure { flex-direction: row; 
+                    justify-content: space-evenly;
+                    /* column-gap: 10px;  */ }
+    #photo figure img { width: 25%; }
+}
+/* 599 이하 모바일 */
+@media screen and ( max-width: 599px ) { 
+    body { margin: 0; border: 0; background: none; }
+    #header { height: 75px;  background: #061f1f; }
+    #header h1 { padding-top: 15px; font-size: 3rem;  }
+    #gnb { }
+    #gnb ul { display: block; margin: 14px 20px 0; }
+    #gnb ul li { width: auto; margin-bottom: 10px; }
+    #gnb ul li a { border: 1px solid #ccc; border-radius: 10px;
+                   background: #fff; color: #000; }
+    #photo figure { flex-direction: column; }
+    #photo figure img { width: 80%; }
+}
