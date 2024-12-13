@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * { box-sizing: border-box; }
+        body, h1, ul { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        .blind { position: absolute; width: 1px; height: 1px; 
+                 margin: -1px; overflow: hidden; 
+                 clip: rect(0, 0, 0, 0); }
+        /* 데스크탑 */
+        /* 헤더 */
+        header { height: 100px; display: flex; 
+                 justify-content: space-between; align-items: center;
+                 background: #ace4c4; }
+        header h1 { padding-left: 30px;  }
+        header nav ul { display: flex; align-items: center; height: 100px; }
+        header nav li { margin: 0 30px; }
+        header nav li a { color: #000; font-size: 1.5rem; }
+        .viewMenu { display: none; }
+        /* 메인  */
+        main { display: flex; justify-content: space-evenly;
+               padding: 50px 0; background: #5d74c6; }
+        main section { width: 30vw; height: 30vw;
+                       background: #f0eeae; font-size: 3vw; }
+        footer { height: 150px; background: #6ad799; }
+
+        @media screen and (max-width: 1000px) {
+            header nav { position: fixed; top: 0; right: -200px; 
+                         width: 200px; height: 100vh; 
+                         background: #fff; }
+            header nav ul { height: 100vh; display: block; }
+            header nav ul li { height: 20%; }
+            .viewMenu { display: block; }
+            main { flex-wrap: wrap; row-gap: 20px; }
+            main section { width: 90vw; height: 90vw;
+                           font-size: 9vw; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>로고</h1>
+        <nav>
+            <h2 class="blind">이용메뉴</h2>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="viewMenu">메뉴펼침</a>        
+    </header>
+    <main>
+        <section>섹션1</section>
+        <section>섹션2</section>
+        <section>섹션3</section>
+    </main>
+    <footer>
+        푸터
+    </footer>
+</body>
+</html>
