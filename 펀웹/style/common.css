@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import url(./webfont.css);
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { text-decoration: none; color: #333; }
+address { font-style: normal; }
+hr { display: none; }
+.hidden { position: absolute; width: 1px; height: 1px; margin: -1px;
+          overflow: hidden; clip: rect(0, 0, 0, 0); }
+/* 공통 */
+body { font-family: "Segoe UI"; }
+/* 헤더 */
+#header { position: fixed; top: 0; left: 0; z-index: 99;
+          width: 100%; height: 100px; 
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #fffc; }
+#header h1 { width: 249px; height: 50px; margin-left: 32px; }
+#header h1 a { display: block; height: 100%;
+               background: url(../images/logo.png) no-repeat; 
+               text-indent: 100%; overflow: hidden; }
+/* membership */
+#membership { order: 2; margin-right: 35px; }
+#membership ul { display: flex; }
+#membership ul li.goLogin { position: relative; padding-right: 9px; }
+#membership ul li.goLogin::after { content: ""; height: 15px;
+                                   position: absolute; top: 5px; right: 0; 
+                                   border-right: 2px solid #333; }
+#membership ul li.goJoin { padding-left: 9px; }
+
+/* GNB */
+#gnb ul { display: flex; }
+#gnb ul li a { padding: 0 15px; text-transform: uppercase; }
+#gnb ul li a:hover { padding-bottom: 5px; border-bottom: 3px solid #207b7b; }
+
+/* 푸터 */
+#footer { padding: 20px 62px 30px 200px; border-top: 1px solid #ccc;
+          background: url(../images/logoFooter.png) no-repeat 50px 30px; 
+          display: flex; justify-content: space-between; }
+#footer .sns  { display: flex; gap: 20px; }
+#footer .sns li { width: 32px; }
+#footer .sns li a { display: block; height: 32px; 
+                    background: url(../images/bgSns.png) no-repeat; 
+                    white-space: nowrap; overflow: hidden; text-indent: 100%; }
+#footer .sns .twitter a { background-position: right;  }

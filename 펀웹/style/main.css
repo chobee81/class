@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* 슬로건 */
+#slogan { position: relative; height: 700px; margin-top: 100px; background: url(../images/slider1.jpg) no-repeat center / cover; 
+    display: flex; flex-direction: column; align-items: center; justify-content: center; 
+    text-align: center; }
+#slogan::before { content: ""; position: absolute; top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            background: #000;
+            opacity: 0.5 }
+#slogan p { position: relative; margin-bottom: 70px; color: #fff;
+      font-size: 5rem; line-height: 90px;  
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #000;  }
+#slogan a { position: relative; padding: 10px 20px; 
+      border: 1px solid #fff; border-radius: 20px 0; 
+      color: #fff; 
+      transition: 0.5s; }
+#slogan a:hover { background: #000;  }
+/* 본문시작 */
+/* 솔루션 */
+#solution { display: flex; justify-content: center; 
+      background: #ebebeb; }
+#solution .solution { width: 310px; height: 400px; padding-top: 150px;
+                background: url(../images/bgSolution.png) no-repeat 0 50px; }
+#solution .hosting { background-position-x: 70px; }
+#solution .security { background-position-x: -240px; }
+#solution .payment { background-position-x: -570px; }
+#solution h3 { margin-bottom: 15px; }
+/* customer center */
+#customerBoard { display: flex; justify-content: center; }
+/* 공통 */
+#customerBoard > section { position: relative; width: 465px; padding: 70px 20px 0; }
+#customerBoard > section > h3 { padding-bottom: 20px; border-bottom: 1px solid #000;
+                          font-weight: normal; font-size: 1.5rem; }
+#customerBoard .more { position: absolute; top: 70px; right: 20px;
+                 width: 31px; height: 31px;
+                 text-indent: 100%; white-space: nowrap;
+                 overflow: hidden; transition: 0.3s; }
+#customerBoard .more::before { content: ""; position: absolute; top: 0; left: 15px;
+                         height: 30px; border-left: 1px solid #000; }
+#customerBoard .more::after { content: "";position: absolute; top: 15px; left: 0;
+                        width: 30px;border-top: 1px solid #000; }
+#customerBoard .more:hover { transform: rotate(45deg); } 
+/* security news */
+#securityNews h3 { margin-bottom: 25px; }
+#securityNews h3 span { color: #ff4e18; }
+#securityNews dl { padding: 0 20px; }
+#securityNews dl dt { font-size: 1.2em; }
+#securityNews dl dd { margin: 17px 0 35px; }
+/* news & notice */
+#newsNotice ul li { padding: 15px 20px; border-bottom: 1px solid #b8b8b8;  }
+#newsNotice ul li a { display: block; color: #333; 
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+#newsNotice ul li span { font-size: 14px; color: #7d7d7d; }
