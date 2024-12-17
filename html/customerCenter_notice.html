@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funweb 고객센터</title>
+    <link rel="stylesheet" href="./style/sub.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="./">funweb</a></h1>
+        <nav id="membership">
+          <h2 class="hidden">멤버쉽네비게이션</h2>
+          <ul>
+            <li class="goLogin"><a href="#">login</a></li>
+            <li class="goJoin"><a href="#">Join</a></li>
+          </ul>
+        </nav>
+        <nav id="gnb">
+          <h2 class="hidden">펀웹 주요이용메뉴</h2>
+          <ul>
+            <li><a href="./">home</a></li>
+            <li><a href="./company_welcome.html">company</a></li>
+            <li><a href="#">solutions</a></li>
+            <li><a href="./customerCenter_notice.html">customer center</a></li>
+            <li><a href="#">contact us</a></li>
+          </ul>
+        </nav>
+    </header>
+    <hr>
+    <!-- 서브 시작 -->
+    <main>
+        <section id="container">
+            <header id="subHeader" class="subHeaderCustomerCenter" >
+                <h2>CustomerCenter</h2>
+            </header>
+            <nav id="snb">
+                <h3 class="hidden">customer center 서브메뉴</h3>
+                <ul>
+                  <li class="on"><a href="#">notice</a></li>
+                  <li><a href="#">public news</a></li>
+                  <li><a href="#">driver download</a></li>
+                  <li><a href="#">service policy</a></li>
+                </ul>  
+            </nav>
+            <article id="subContent" class="subContentNotice">
+                <h3>Notice</h3>
+                <table id="notice">
+                    <caption class="hidden">공지사항</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col" class="no">no.</th>
+                        <th scope="col" class="title">title</th>
+                        <th scope="col" class="write">writer</th>
+                        <th scope="col" class="date">date</th>
+                        <th scope="col" class="read">read</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td><div>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></td>
+                            <td>Web Admin</td>
+                            <td>2011.05.11</td>
+                            <td>15000</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Vivamus viverra porttitor commodo.</td>
+                            <td>Web Admin</td>
+                            <td>2011.05.11</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>In pulvinar fermentum erat a tincidunt. Nulla id magna sit</td>
+                            <td>Sec Admin</td>
+                            <td>2011.05.11</td>
+                            <td>15000</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Sed diam velit, dictum a iaculis sed, tempor sed mi.</td>
+                            <td>Host Admin</td>
+                            <td>2011.05.11</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Nullam ac dignissim diam. Mauris vitae magna ipsum,</td>
+                            <td>Host Admin</td>
+                            <td>2011.05.11</td>
+                            <td>15</td>
+                        <tr>
+                            <td>5</td>
+                            <td> eget vehicula metus. In euismod sollicitudin lorem eu aliquet.</td>
+                            <td>Host Admin</td>
+                            <td>2011.05.11</td>
+                            <td>15000</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                            <td>Sec Admin</td>
+                            <td>2011.05.11</td>
+                            <td>1500</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Vivamus viverra porttitor commodo.</td>
+                            <td>Sec Admin</td>
+                            <td>2011.05.11</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><div>In pulvinar fermentum erat a tincidunt. Nulla id magna sit Nullam ac dignissim diam. Mauris vitae magna ipsum,</div></td>
+                            <td>Web Admin</td>
+                            <td>2011.05.11</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><div>Nullam ac dignissim diam. Mauris vitae magna ipsum,Nullam ac dignissim diam. Mauris vitae magna ipsum,</div></td>
+                            <td>Web Admin</td>
+                            <td>2011.05.11</td>
+                            <td>150</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form id="noticeSearch">
+                    <fieldset>
+                        <legend class="hidden">공지사항검색</legend>
+                        <input type="text" id="searchBox" aria-label="검색어입력" placeholder="검색어를 입력하세요">
+                        <input type="button" id="searchBtn" aria-label="검색버튼" value="Search" >
+                    </fieldset>
+                </form>
+                <div id="pageControl">
+                    <a href="#">Prev</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#">Next</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- 서브 끝 -->
+    <hr>
+    <footer id="footer">
+        <div class="info">
+            <small>All contents Copyright 2011 FunWeb Inc. all rights reserved</small>
+            <address>Contact mail : funweb@funwebbiz.com Tel: +82 64 123 4315 Fax +82 64 123 4321</address>
+        </div>
+        <ul class="sns">
+            <li class="facebook"><a href="#">페이스북 바로가기</a></li>
+            <li class="twitter"><a href="#">트위터 바로가기</a></li>
+        </ul>
+    </footer> 
+</body>
+</html>

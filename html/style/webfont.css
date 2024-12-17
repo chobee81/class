@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* 본문글꼴 */
+@font-face {
+    font-family: "Segoe UI";
+    src: url(../webfont/segoeui.ttf) format('ttf'),
+         url(../webfont/segoeui.eot) format('eot'),
+         url(../webfont/segoeui.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}

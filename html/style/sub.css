@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import url(./common.css);
+/* 컨테이너 공통 */
+#container { margin-top: 100px; }
+/* 서브헤더 */
+#subHeader { display: flex; justify-content: center; align-items: center; height: 400px; 
+            background: no-repeat center top /cover;
+             perspective: 500px;  }
+/* 페이지마다 각각의 배경 적용 */
+#subHeader.subHeaderCompany { background-image: url(../images/bgSubCompany.jpg); }
+#subHeader.subHeaderCustomerCenter { background-image: url(../images/bgSubCustomer.jpg);
+                                     background-position: center; }
+
+#subHeader h2 { color: #fff; font-size: 4rem; transition: 0.5s;
+                text-transform: uppercase; text-shadow: 5px 0 3px #0005; }
+#subHeader:hover h2 { transform: translateZ(100px) rotateX(-45deg);  }
+/* SNB */
+#snb { border-bottom: 1px solid #000; }
+#snb ul { display: flex; justify-content: center; }
+#snb ul li { width: 300px; border-left: 1px solid #000; }
+#snb ul li a { display: block; height: 50px; line-height: 50px;
+               font-size: 14px;
+               text-align: center; text-transform: uppercase; 
+               background: url(../images/bgSnb.png) no-repeat right 10px center; }
+#snb ul li:last-child a { border-right: 1px solid #000; }
+#snb ul li.on a { border-bottom: 5px solid #5687b9; }
+/* 서브컨텐츠 공통 */
+#subContent { width: 1200px; margin: 0 auto; }
+#subContent h3 { margin: 50px 0;
+             /* font-weight: normal;
+                font-size: 45px;  
+                font-family: "Times New Roman", serif;  */
+                font: 45px "Times New Roman", serif;
+            }
+/* 개별페이지 */
+/* company */
+#subContent.subContentWelcome figure { float: right; margin-left: 20px; text-align: center; }
+#subContent.subContentWelcome p { margin-bottom: 20px; text-align: justify; }
+/* notice */
+#subContent.subContentNotice { }
+#notice { width: 1200px; }
+#notice thead th { height: 30px; color: #fff;
+    background: linear-gradient(180deg, #66aeeb, #3d93ef 50%, #328aee 50%, #2872e0);
+    font-weight: normal; text-align: center;
+    text-transform: capitalize; letter-spacing: 0.05em;
+}
+#notice thead th.no { width: 70px; border-radius: 5px 0 0 5px; }
+#notice thead th.title { width: 800px; }
+#notice thead th.write { width: 120px; }
+#notice thead th.date { width: 120px; }
+#notice thead th.read { border-radius: 0 5px 5px 0; }
+#notice tbody td { padding: 15px 0; border-bottom: 1px solid #ccc; }
+/* 부정선택자 :not()을 사용하여 두번째 셀을 제외한 나머지 셀에 중앙정렬 */
+#notice tbody td:not(:nth-child(2)) { text-align: center; }
+#notice tbody td > div { width: 800px; white-space: nowrap; 
+                         overflow: hidden; text-overflow: ellipsis; }
+/* noticeSearch */
+#noticeSearch { display: flex; justify-content: end;
+                margin: 16px 0 40px; }
+#searchBox { width: 222px; height: 22px; padding-left: 15px;
+             border: 1px solid #000; border-radius: 10px; }
+#searchBtn { width: 90px; height: 22px; 
+             border: 1px solid #333; border-radius: 10px; 
+             background: linear-gradient(#5dabf6 50%, #3989da 50%); 
+             color: #fff; }
+/* pageControl */
+#pageControl { margin: 35px 0; text-align: center; }
+#pageControl a { margin: 0 15px; }
