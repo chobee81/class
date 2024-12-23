@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폰트크기 조절</title>
+    <script>
+        console.log(!!1);
+        console.log(!!2);
+        console.log(!!-1);
+        console.log(!!'일')
+        console.log('---아래의 경우 모두 false---')
+        console.log(!!0);
+        console.log(!!undefined)
+        console.log(!!null)
+        console.log(!!'')
+        console.log(!!NaN)
+
+    </script>
+</head>
+<body>
+    <button>폰트크기+</button>
+    <button>폰트크기-</button>
+    <p>폰트크기가 바뀌어요</p>
+    <script>
+        const btn = document.querySelectorAll('button');
+        const pTag = document.querySelector('p');
+
+        let fontSize = 16;
+        let state = true;
+
+        function fontSizing(st) {
+            if ( st ) {
+                if ( fontSize >= 50 ) return;
+                fontSize += 5;
+            }
+            else {
+                if ( fontSize <= 15 ) return;
+                fontSize -= 5;
+            }
+            pTag.style.fontSize = `${fontSize}px`;
+
+        }        
+        btn[0].addEventListener('click', () => {
+            fontSizing(state);
+        })
+        btn[1].addEventListener('click', () => {
+            fontSizing(!state);
+        })
+
+    </script>
+</body>
+</html>

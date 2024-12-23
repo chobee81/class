@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>반복문</title>
+  <script>
+    let fruit = ['수박','참외','포도']
+    for (let i=0; i<fruit.length; i++ ) {
+      console.log(`${i+1}등 ${fruit[i]}`)
+    }
+  </script>
+  <style>
+    #box { display: flex; gap: 20px; }
+    #box > div { width: 100px; height: 100px;
+                 border: 1px solid #000; }
+  </style>
+</head>
+<body>
+  <button>100</button>
+  <button>200</button>
+  <button>300</button>
+  <h1>버튼의 텍스트값 입력</h1>
+  <div id="box">
+    <div data-bg="red">red</div>
+    <div data-bg="blue">blue</div>
+    <div data-bg="green">green</div>
+  </div>
+  <script>
+    const btn = document.querySelectorAll('button');
+    const heading = document.querySelector('h1');
+    const divs = document.querySelectorAll('#box > div');
+    console.log(btn);
+    console.log(heading);
+    console.log(divs);
+
+    // 버튼 클릭시 각 버튼의 텍스트 값을 h1에 텍스트 값으로 입력
+    for (let i=0; i<btn.length; i++) {
+      btn[i].addEventListener('click', (e) => {
+        heading.innerText = e.currentTarget.innerText;
+      })
+    }
+
+    // 각 div를 클릭할 때마다 색상이 변하도록
+    for ( let i=0; i<divs.length; i++) {
+      divs[i].addEventListener('click', (e) => {
+        // div[i].style.backgroundColor = 'gray';
+        // e.target.style.backgroundColor = 'gray';
+        // e.target.style.backgroundColor = e.target.innerText;
+        // e.target.style.backgroundColor = e.target.getAttribute('data-bg');
+        // e.target.style.backgroundColor = e.target.dataset['bg'];
+        e.target.style.backgroundColor = e.target.dataset.bg;
+      })
+    }
+
+    // btn[0].addEventListener('click', (e)=> {
+    //   heading.innerText = e.currentTarget.innerText;
+    // })
+    // btn[1].addEventListener('click', (e)=> {
+    //   heading.innerText = e.currentTarget.innerText;
+    // })
+    // btn[2].addEventListener('click', (e)=> {
+    //   heading.innerText = e.currentTarget.innerText;
+    // })
+
+
+
+  </script>
+</body>
+</html>

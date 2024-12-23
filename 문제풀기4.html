@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body { margin: 0; }
+    div { margin-top: 20px; display: flex; justify-content: space-evenly; }
+    section { width: 25vw; height: 20vw; border: 1px solid #000; 
+              transition: 0.5s; }
+  </style>
+</head>
+<body>
+    <div>
+      <section></section>
+      <section></section>
+      <section></section>
+    </div>
+    <script>
+      const sect = document.querySelectorAll('section');
+      for ( let i=0; i<sect.length; i++ ) {
+        sect[i].addEventListener('mouseenter', (e)=> {
+          e.target.style.boxShadow = `0 10px 30px #0005`;
+        })
+        sect[i].addEventListener('mouseleave', (e)=> {
+          e.target.style.boxShadow = `0 0 0 #0005`;
+        })
+      }
+    </script>
+</body>
+</html>
