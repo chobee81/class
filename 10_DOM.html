@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>요소에 접근하기</title>
+</head>
+<body>
+  <h1 id="heading">Element</h1>
+  <div>
+    <ul>
+      <li class="nodes">tagName</li>
+      <li>attribute</li>
+      <li class="nodes">text</li>
+      <li>comment</li>
+    </ul>
+  </div>
+  <script>
+    /** 
+     * HTMLCollection
+     */
+    // const heading = document.getElementsByTagName('h1');
+    // console.log(heading);
+    // heading[0].style.color = 'red';
+    // const heading = document.getElementById('heading');
+    // console.log(heading)
+    // heading.style.color = 'red';
+
+    // const ul = document.getElementsByTagName('ul');
+    // ul[0].style.border = '1px solid #000';
+
+    // const lis = document.getElementsByTagName('li');
+    // console.log(lis);
+    // lis[0].style.color = 'blue';
+    // lis[1].style.color = 'blue';
+    // lis[2].style.color = 'blue';
+    // lis[3].style.color = 'blue';
+    // for (let i=0; i<lis.length; i++) {
+    //   lis[i].style.color = 'blue';
+    // }
+    // for (let i of lis) {
+    //   i.style.color = 'blue';
+    // }
+    // for (let i in lis) {
+    //   lis[i].style.color = 'blue';
+    // }
+    // lis.forEach((i) => {
+    //   i.style.color = 'blue'
+    // })
+
+    // const nodes = document.getElementsByClassName('nodes');
+    // console.log(nodes)
+    // for (let n=0; n<nodes.length; n++) {
+    //   nodes[n].style.backgroundColor = 'yellow';
+    // }
+
+    /**
+     * NodeList
+     */
+    // const ul = document.querySelector('ul');
+    // console.log(ul)
+    // ul.style.border = '1px solid #000';
+    // const li = document.querySelectorAll('li');
+    // console.log(li)
+    // for (let i=0; i<li.length; i++) {
+    //   li[i].style.color = 'blue';
+    // }
+    // for (let i of li) {
+    //   i.style.color = 'blue';
+    //   console.log(i)
+    // }
+    // for (let i in li) {
+    //   li[i].style.color = 'blue';
+    //   console.log(i)
+    // }
+    // li.forEach((i) => {
+    //   i.style.color = 'blue'
+    // })
+  </script>
+
+  <!-- <div id="box">
+    <h2>test</h2>
+    <div class="greeting">Hello</div>
+  </div> -->
+  <script>
+    // const box = document.querySelector('#box');
+    // // const greeting = document.getElementsByClassName('greeting');
+    // const greeting = document.querySelectorAll('.greeting')
+    // console.log(greeting, greeting.length)
+    // box.insertAdjacentHTML('beforeend', `<div class="greeting">Hello</div>`);
+    // console.log(greeting, greeting.length)
+  </script>
+
+  <script>
+    const ul = document.querySelector('ul');
+    console.log(ul);
+    /**
+     * 자식요소
+     * children[], childNodes[], firstChild, lastChild
+     */
+    // ul.childNodes[0].style.color = 'red';
+    // ul.firstChild.style.color = 'red';
+    ul.children[1].style.color = 'blue';
+    ul.firstElementChild.style.color = 'red';
+    ul.lastElementChild.style.color = 'green';
+
+    /**
+     * 부모요소
+     * parentNode, parentElement
+     */
+    // ul.parentNode.style.backgroundColor = 'yellow';
+    ul.parentElement.style.backgroundColor = 'yellow';
+
+    /**
+     * 형제요소
+     * previousSibling, nextSibling
+     * previousElementSibling, nextElementSibling
+     */
+    const liSecond = ul.children[1];
+    console.log(liSecond)
+    liSecond.previousElementSibling.style.border = "1px solid #000";
+    liSecond.nextSibling.nextSibling.style.border = "1px solid #000";
+
+    for ( let name in Node) {
+      console.log(name, Node[name])
+    }
+
+  </script>
+
+</body>
+</html>

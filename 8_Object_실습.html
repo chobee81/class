@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>컴퓨터의 가위,바위,보 맞추기</title>
+  <script>
+    document.write(`<h1>컴퓨터 가위,바위,보, 맞추기</h1>`)
+    // 1부터 3까지 랜덤한 수를 반환
+    // 컴퓨터 1:가위, 2:바위, 3:보
+    let com = Math.ceil(Math.random() * 3);
+    console.log(com)
+    let user = prompt('가위, 바위, 보 선택');
+    let userNum;
+    switch (user) {
+      case '가위' : userNum = 1; break;
+      case '바위' : userNum = 2; break;
+      case '보' : userNum = 3; break;      
+      default: alert('입력한 값이 없습니다')
+    }
+    document.write(`<img src='./images/play/math_img_${com}.jpg' alt='가위,바위,보'>`)
+    // 사용자가 낸 값과 컴퓨터가 낸 값이 일치하는지 검사
+    if ( userNum === com ) {
+      document.write('축하합니다. 정답입니다')
+    }
+    else if ( userNum != 1 && userNum != 2 && userNum != 3 ) {
+      document.write("입력한 값이 가위 바위 보가 아닙니다");
+    }
+    else {
+      document.write('아쉽게도 틀렸습니다');  
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

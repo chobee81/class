@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>객체</title>
+  <script>
+    /**
+     * 객체
+     * 내장객체와 사용자 생성객체로 나뉜다.
+     */
+    // 숫자객체
+    // console.log(Number.MAX_VALUE)
+    // console.log(Number.MIN_VALUE)
+    // console.log(Number.NaN)
+    // console.log(Number.POSITIVE_INFINITY)
+    // console.log(Number.NEGATIVE_INFINITY)
+
+    // let num1 = 70000;
+    // console.log(num1.toExponential(1));
+    
+    // let num2 = 3.456789;    
+    // console.log(num2.toFixed(2));
+    // console.log(num2.toPrecision(2));
+    // console.log(num2.toString())
+    
+    // let num3 = '30.5px';
+    // console.log(parseInt(num3))
+    // console.log(parseFloat(num3))
+    // console.log('-----------')
+
+    // 수학객체
+    // console.log(Math.max(10, 5, 9, 30))
+    // console.log(Math.min(10, 5, 9, 30))
+    // console.log(Math.random())
+    // console.log(Math.ceil(1.4))
+    // console.log(Math.round(1.4))
+    // console.log(Math.floor(1.4))
+    // console.log(Math.PI)    
+
+    // 문자객체
+    // let greeting = "Hello, my name is javascript!";
+    // console.log(greeting.length);
+    // console.log(greeting.charAt(10));
+    // console.log(greeting.indexOf('name'));
+    // console.log(greeting.indexOf('e', 10));
+    // console.log(greeting.lastIndexOf('e'));
+    // console.log(greeting.includes('name'));
+    // console.log(greeting.search('names'));
+    // console.log(greeting.match('name')); // 배열반환, 없을시 null
+    // console.log(greeting.substr(10, 4));
+    // console.log(greeting.substring(10, 14));
+    // console.log(greeting.replace('my', 'your')); // 모두 바꿀 때 replaceAll
+    // console.log(greeting.toUpperCase());
+    // console.log(greeting.toLowerCase());
+
+    // 날짜객체
+    // let day = new Date();
+    // console.log(day)
+    // let getYear = day.getFullYear();
+    // console.log(getYear)
+    // let getMonth = day.getMonth();
+    // console.log(getMonth)
+    // let getDate = day.getDate();
+    // console.log(getDate)
+    // let getDay = day.getDay();
+    // console.log(getDay)
+
+    // let mDay = new Date(2024, 11, 32); // 12월 32일 없으므로 날짜 이월
+    // console.log(mDay)
+
+    // let today = new Date();
+    // let birthday = new Date(1879,8,2);
+
+    // let oneDay = 24*60*60*1000
+    // let totalDay = Math.floor((today - birthday) / oneDay);
+    // console.log(`안중근 의사가 태어나고 ${totalDay}일이 흘렀습니다`)
+
+    // let today = new Date();
+    // let nextDay = new Date(2025, 0, 1);
+    // let dDay = Math.ceil((nextDay-today) / (24*60*60*1000));
+    // console.log(`내년 1월 1일이 ${dDay}일 남았습니다`)
+
+   
+
+  </script>
+</head>
+<body>
+  <script>
+    // let userName = prompt('당신의 영문이름은?');
+    // let upperName = userName.toUpperCase();
+    // console.log(upperName);
+
+    // let userNum = prompt('연락처를 입력하시오');
+    // let resultNum = userNum.substring(0, userNum.length-4) + "****";
+    // console.log(resultNum)
+
+    // const myInfo = '안녕하세요 제 휴대폰번호는 010-1234-5678';
+    // const telNum = myInfo.match(/\d{3}-\d{4}-\d{4}/);
+    // console.log(telNum.join(), typeof telNum)
+
+    function clock() {
+      let today = new Date();      
+      let getHours = today.getHours();
+      let getMinutes = today.getMinutes();
+      let getSeconds = today.getSeconds();
+      // console.log(getHours)
+      // console.log(getMinutes)
+      // console.log(getSeconds)
+      // document.write(`현재 시간은 ${getHours}시 ${getMinutes}분 ${getSeconds}초입니다`)
+      document.body.innerHTML = `현재 시간은 ${getHours}시 ${getMinutes}분 ${getSeconds}초입니다`
+    }
+    clock();
+    setInterval(clock, 1)
+
+  </script>
+</body>
+</html>
