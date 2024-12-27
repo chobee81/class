@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <p>내용1</p>
+    <p>내용2</p>
+    <p>내용3</p>
+    <p>내용4</p>
+  </div>
+  <script>
+    /**
+    * 유사배열객체
+    * 값은 배열처럼 나열되지만, 실제 숫자가 key값인 객체
+    * 인덱스에 접근할 수 있고, length 값을 가진다
+    * Array.isArray() 로 실제 배열인지 아닌지 판별
+    */
+    const array = [ 1 ,2, 3 ];
+    const greeting = { "0": "hello", "1": "hi", length: 2 };
+    const pTag = document.getElementsByTagName('p');
+    // const pTag = document.querySelectorAll('p');
+
+    console.dir(array);
+    console.dir(greeting);
+    console.dir(pTag);
+
+    console.log(typeof array);
+    console.log(typeof greeting);
+    console.log(typeof pTag);
+
+    console.log(Array.isArray(array));
+    console.log(Array.isArray(greeting));
+    console.log(Array.isArray(pTag));
+   
+  </script>
+</body>
+</html>
