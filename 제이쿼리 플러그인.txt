@@ -1,0 +1,12 @@
+기본슬라이드
+bxslider
+
+스와이퍼 슬라이드
+https://swiperjs.com/
+https://kenwheeler.github.io/slick/
+
+원페이지 슬라이드
+fullpage.js
+
+가변형그리드
+http://blog.xlune.com/2009/09/vgrid/
