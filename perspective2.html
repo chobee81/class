@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      background: #000;
+      box-sizing: border-box;
+    }
+
+    #wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      perspective: 500px;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      transition: 0.5s;      
+    }
+
+    .pers {
+      position: relative;
+      z-index: -1;
+      width: 100%;
+      height: 500vh;
+      background-color: transparent;
+      background-image: linear-gradient(to left, transparent 99px, #fff),
+                        linear-gradient(to bottom, transparent 99px, #fff);
+      background-size: 100px 100px;
+      border: 1px solid #fff;
+      transform: rotateX(45deg);
+    }
+
+    #wrap p {
+      position: absolute;
+      left: 50%;
+      translate: -50%;
+      z-index: 9;
+      background: transparent;
+      color: #fff;
+      font-size: 10vw;
+      transition: 0.5s;
+    }
+
+    #wrap:hover {
+      perspective: 100px;
+    }
+    #wrap:hover p {
+      font-size: 20vw; 
+    }
+
+    section { height: 100vh; background: #1f1f1f; }
+
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="pers"></div>
+    <p>center</p>
+  </div>
+  <section></section>
+</body>
+</html>
