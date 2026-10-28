@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Color Mask</title>
+
+    <style>
+        :root {
+            --main_color: #ff0000;
+            --font-size: 10vw;
+        }
+
+        body {
+            margin: 0;
+            min-height: 250vh;
+            padding: 40vh 5vw;
+            box-sizing: border-box;
+        }
+
+        .color-mask .base {
+            position: fixed;
+            color: rgba(0, 0, 0, 0.2);
+            font-size: var(--font-size);
+
+            background-image: linear-gradient(90deg,
+                    var(--main_color),
+                    var(--main_color));
+
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 0% 100%;
+
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            display: inline;
+            transition: background-size 0.1s linear;
+        }
+
+        .color-mask .base1 {
+            left: 5vw;
+            top: 20vh;
+
+        }
+
+        .color-mask .base2 {
+            left: 5vw;
+            top: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="color-mask">
+        <span class="base base1">COLOR</span>
+        <span class="base base2">SHIFT</span>
+    </h1>
+
+    <script>
+        const base1 = document.querySelector('.base1');
+        const base2 = document.querySelector('.base2');
+
+        function updateColor() {
+            const scrollTop = window.scrollY;
+
+            // 각 텍스트의 마스크 적용 구간
+            const start1 = 0;
+            const end1 = 500;
+
+            const start2 = 500;
+            const end2 = 1000;
+
+            // 진행률 계산 (0 ~ 1)
+            function getProgress(scrollTop, start, end) {
+                return Math.max(
+                    0,
+                    Math.min(1, (scrollTop - start) / (end - start))
+                );
+            }
+
+            const progress1 = getProgress(scrollTop, start1, end1);
+            const progress2 = getProgress(scrollTop, start2, end2);
+
+            // 각 텍스트에 마스크 적용
+            base1.style.backgroundSize = `${progress1 * 100}% 100%`;
+            base2.style.backgroundSize = `${progress2 * 100}% 100%`;
+        }
+
+        window.addEventListener('scroll', updateColor, {
+            passive: true
+        });
+
+        updateColor();
+
+    </script>
+</body>
+
+</html>

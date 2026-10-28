@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오</title>
+    <style>
+        :root {
+            --font-title: 20vw;
+            --font-btn: 4vw;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        #intro {
+            position: relative;
+            height: 100vh;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .view {
+            position: relative;
+            z-index: 9;
+        }
+
+        #intro h2 {
+            color: #ffffffaa;
+            font-size: var(--font-title);
+            font-family: 'A2z';
+        }
+
+        #intro a {
+            display: block;
+            border-bottom: 5px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: var(--font-btn);
+            font-weight: bold;
+        }
+
+        /* 비디오를 배경으로 */
+        #video {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #video video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="intro">
+        <h2 class="view">intro</h2>
+        <a href="#" class="view">enter</a>
+        <div id="video">
+            <!-- 비디오 태그 (playsinline과 muted는 자동 제어 및 모바일 재생에 필수) -->
+            <video src="./video3.mp4" muted playsinline></video>
+        </div>
+    </section>
+    <script>
+        const video = document.querySelector('#video video');
+
+        // 휠 조작 시 부드러운 이동을 위한 감도 설정 (초 단위)
+        const step = 0.2;
+
+        // 비디오 데이터가 로드되면 초기 프레임을 보여주기 위해 살짝 재생 후 일시정지
+        video.addEventListener('loadeddata', () => {
+            video.currentTime = 0;
+        });
+
+        // 윈도우 전체에 휠 이벤트 리스너 추가
+        window.addEventListener('wheel', (event) => {
+            // 기본 스크롤 동작 방지
+            event.preventDefault();
+
+            // event.deltaY가 양수이면 휠을 아래로(정방향), 음수이면 위로(역방향)
+            if (event.deltaY > 0) {
+                // 아래로 휠: 비디오 앞으로 감기
+                video.currentTime = Math.min(video.duration, video.currentTime + step);
+            } else {
+                // 위로 휠: 비디오 뒤로 감기 (역재생 효과)
+                video.currentTime = Math.max(0, video.currentTime - step);
+            }
+        }, { passive: false }); // preventDefault()를 사용하기 위해 passive를 false로 설정
+    </script>
+    <!--  
+        🔍 Video.addEventListener('pause', () => {})
+            비디오가 일시정지 됐을때 일어날 이벤트를 작성한다.
+
+        🔍 Video.addEventListener('play', () => {})
+            비디오가 재생됐을때 일어날 이벤트를 작성한다.
+
+        🔍 Video.addEventListener('timeupdate', () => {})
+            비디오의 재생시간이 업데이트 될때 일어날 이벤트를 작성한다.
+
+        🔍 Video.currentTime
+            currentTime 속성은 비디오의 현재 재생 위치를 반환한다.
+
+        🔍 Video.duration
+            duration 속성은 비디오의 전체 재생 길이를 반환한다. 
+
+        // 간단한 비디오 토글명령어
+        // 버튼 하나로 재생과 일시정지를 토글할 수 있다.
+
+        function toggleVideo(){
+            if(video.paused){
+                video.play(); // 일시정지일 경우 true를 반환하고, 
+            } else{
+                video.pause(); // 재생중일 경우 false를 반환한다.
+            }
+        }
+
+    -->
+
+
+</body>
+
+</html>

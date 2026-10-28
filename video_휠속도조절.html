@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오</title>
+    <style>
+        :root {
+            --font-title: 20vw;
+            --font-btn: 4vw;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        #intro {
+            position: relative;
+            height: 100vh;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .view {
+            position: relative;
+            z-index: 9;
+        }
+
+        #intro h2 {
+            color: #ffffffaa;
+            font-size: var(--font-title);
+            font-family: 'A2z';
+        }
+
+        #intro a {
+            display: block;
+            border-bottom: 5px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: var(--font-btn);
+            font-weight: bold;
+        }
+
+        /* 비디오를 배경으로 */
+        #video {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #video video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="intro">
+        <h2 class="view">intro</h2>
+        <a href="#" class="view">enter</a>
+        <div id="video">
+            <video src="./video4.mp4" autoplay muted loop></video>
+        </div>
+    </section>
+    <script>
+        const videoWrap = document.querySelector('#video');
+        const video = document.querySelector('#video video');
+        const MIN_SPEED = 0.25;
+        const MAX_SPEED = 5.0;
+        const SPEED_STEP = 0.1;
+        video.addEventListener('wheel', function (event) {
+            // 휠 스크롤로 인해 페이지가 전체 스크롤되는 현상 방지
+            event.preventDefault();
+
+            // event.deltaY가 음수이면 휠을 위로(UP), 양수이면 아래로(DOWN)
+            if (event.deltaY < 0) {
+                // 속도 올리기 (최대 속도 제한)
+                video.playbackRate = Math.min(video.playbackRate + SPEED_STEP, MAX_SPEED);
+            } else {
+                // 속도 내리기 (최소 속도 제한)
+                video.playbackRate = Math.max(video.playbackRate - SPEED_STEP, MIN_SPEED);
+            }
+        }, { passive: false }); // preventDefault()를 사용하기 위해 passive: false 설정 필수
+    </script>
+</body>
+
+</html>
